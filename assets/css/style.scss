@@ -1,0 +1,52 @@
+@import "minima";
+
+:root {
+  --main-color: #1f1f1f;
+  --accent-color: #ff0066;
+  --bg-color: #fff;
+  --footer-bg: #f9f9f9;
+}
+
+body {
+  font-family: "Lora", serif;
+  background-color: var(--bg-color);
+}
+
+header.site-header {
+  background: var(--main-color);
+  padding: 1rem;
+  border-bottom: 4px solid var(--accent-color);
+
+  .site-title {
+    font-size: 1.8rem;
+    color: #fff;
+  }
+
+  img.logo {
+    height: 40px;
+    vertical-align: middle;
+    margin-right: 10px;
+  }
+}
+
+footer.site-footer {
+  background: var(--footer-bg);
+  color: #333;
+  padding: 2rem;
+  font-size: 0.9rem;
+
+  .footer-col-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .footer-col {
+    flex: 1;
+    margin: 0 1rem;
+  }
+
+  a {
+    color: var(--main-color);
+  }
+}
