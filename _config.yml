@@ -1,37 +1,50 @@
+# Site identity
 title: "The Sonic Verdict"
 description: "Deep dives, hot takes, and sonic truth — a blog for music lovers."
 url: "https://justhal22.github.io"
-baseurl: "/The-Sonic-Verdict"
+baseurl: "/The-Sonic-Verdict" # GitHub Pages repo name
+
+# Visuals
+logo: "/The-Sonic-Verdict/assets/images/logo.png"
+
+# Theme & build
 theme: minima
+markdown: kramdown
+highlighter: rouge
+permalink: /:categories/:title/
+
+# Pagination
+paginate: 6
+paginate_path: "/page:num/"
+
+# Plugins
 plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-seo-tag
   - jekyll-sitemap
-permalink: /:categories/:title/
-paginate: 6
-paginate_path: "/page:num/"
-markdown: kramdown
-highlighter: rouge
+
+# Author info
 author:
   name: "JustHal"
   email: "halbrookes22@gmail.com"
   links:
-    - title: GitHub
+    - title: "GitHub"
       url: "https://github.com/justhal22"
-      icon: fab fa-github
-    - title: Twitter
+      icon: "fab fa-github"
+    - title: "Twitter"
       url: "https://twitter.com/sonicverdict"
-      icon: fab fa-twitter
-    - title: Email
+      icon: "fab fa-twitter"
+    - title: "Email"
       url: "mailto:halbrookes22@gmail.com"
-      icon: fas fa-envelope
+      icon: "fas fa-envelope"
+
+# Front matter defaults
 defaults:
   - scope:
       path: ""
-      type: posts
+      type: "posts"
     values:
-      layout: post
+      layout: "post"
       author: "JustHal"
-      share: true
-      comments: true
+      
