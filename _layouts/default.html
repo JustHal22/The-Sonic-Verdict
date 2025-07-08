@@ -1,4 +1,47 @@
-<h1 class="site-title">
-  <img class="logo" src="{{ site.logo }}" alt="Logo" />
-  {{ site.title }}
-</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="{{ '/' | relative_url }}" class="site-title">
+        <img class="logo" src="{{ site.logo | relative_url }}" alt="Logo" />
+        <span>{{ site.title }}</span>
+      </a>
+      <nav class="site-nav">
+        <a href="{{ '/' | relative_url }}">Home</a>
+        <a href="{{ '/about/' | relative_url }}">About</a>
+        <a href="{{ '/categories/' | relative_url }}">Categories</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <strong>{{ site.title }}</strong><br />
+        <small>{{ site.description }}</small>
+        {% if site.author %}
+          <p class="footer-author">Author: {{ site.author.name }}</p>
+          <ul class="social-links">
+            {% for link in site.author.links %}
+              <li>
+                <a href="{{ link.url }}" target="_blank">
+                  <i class="{{ link.icon }}"></i> {{ link.title }}
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </div>
+      <div class="footer-right
