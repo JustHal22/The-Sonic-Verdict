@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
+  <!-- Header -->
   <header class="site-header">
     <div class="container header-container">
       <a href="{{ '/' | relative_url }}" class="site-title">
@@ -18,16 +19,24 @@
       </a>
       <nav class="site-nav">
         <a href="{{ '/' | relative_url }}">Home</a>
+        <a href="{{ '/categories/up-and-coming/' | relative_url }}">Up & Coming</a>
+        <a href="{{ '/categories/throwbacks/' | relative_url }}">Throwbacks</a>
+        <a href="{{ '/categories/' | relative_url }}">All Posts</a>
         <a href="{{ '/about/' | relative_url }}">About</a>
-        <a href="{{ '/categories/' | relative_url }}">Categories</a>
+        <form class="search-form" action="{{ '/search/' | relative_url }}" method="get">
+          <input type="text" name="q" placeholder="Search..." />
+          <button type="submit"><i class="fas fa-search"></i></button>
+        </form>
       </nav>
     </div>
   </header>
 
+  <!-- Main content -->
   <main class="container">
     {{ content }}
   </main>
 
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="container footer-container">
       <div class="footer-left">
