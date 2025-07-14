@@ -8,7 +8,7 @@ baseurl: "/The-Sonic-Verdict" # GitHub Pages repo name
 logo: logo: /assets/images/logo.png
 
 # Theme & build
-theme: minima
+theme: "minima"
 markdown: kramdown
 highlighter: rouge
 permalink: /:categories/:title/
