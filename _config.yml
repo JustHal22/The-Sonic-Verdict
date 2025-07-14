@@ -5,7 +5,7 @@ url: "https://justhal22.github.io"
 baseurl: "/The-Sonic-Verdict" # GitHub Pages repo name
 
 # Visuals
-logo: "/The-Sonic-Verdict/assets/images/logo.png"
+logo: logo: /assets/images/logo.png
 
 # Theme & build
 theme: minima
