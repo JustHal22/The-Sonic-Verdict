@@ -1,0 +1,18 @@
+<footer class="site-footer">
+  <div class="footer-col-wrapper">
+    <div class="footer-col">
+      <strong>{{ site.title }}</strong><br />
+      {{ site.description }}
+    </div>
+    <div class="footer-col">
+      {% if site.author %}
+      <p><strong>Author:</strong> {{ site.author.name }}</p>
+      <ul>
+        {% for link in site.author.links %}
+        <li><a href="{{ link.url }}"><i class="{{ link.icon }}"></i> {{ link.title }}</a></li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </div>
+  </div>
+</footer>
